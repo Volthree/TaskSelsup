@@ -58,8 +58,8 @@ public class CrptApi {
             requestTimes.add(LocalTime.now());
         } else {
             log.warn("Request out of limit");
-            return null;}
-
+            return null;
+        }
         HttpRequest.BodyPublisher body = HttpRequest.BodyPublishers.ofString(
                 objectMapper.writeValueAsString(crptRegistration),
                 StandardCharsets.UTF_8);
